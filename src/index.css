@@ -1,13 +1,225 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #e4f3fe;
+}
+
+.expenseTracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+  background-color: #f8f8fa;
+}
+
+/*HEADER*/
+
+.headerExpenseTracker {
+  margin-top: 10px;
+  color: white;
+}
+
+/*upperPart*/
+
+.upperPart {
+  background-color: #5e62ac;
+  padding: 20px 50px 20px 50px;
+  border-radius: 7px;
+  width: 100%;
+}
+
+/*BALANCE*/
+
+.yourBalance {
+  color: #9fa0cb;
+  margin-top: 20px;
+}
+
+.balanceNumber {
+  color: white;
+}
+
+/*INCOME EXPENSE*/
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.container div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #eef0f9;
+  border-radius: 7px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 7px 0px;
+  width: 50%;
+  color: #bcc0d0;
+}
+
+.container div h4 {
+  color: #3a385a;
+}
+
+/*HISTORY*/
+.history {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*UL*/
+.transactionList {
+  width: 90%;
+}
+
+ul {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  border: 1px solid grey;
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+
+li h4 {
+  width: 30%;
+  word-wrap: break-word;
+}
+
+li button {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid grey;
+  padding: 4px;
+  background-color: #fbd3d1;
+  border: none;
+  color: #b55c5d;
+  font-weight: bold;
+  transition: 0.1s ease-out;
+}
+
+li button:hover {
+  background-color: #b55c5d;
+  color: #fbd3d1;
+}
+
+/*INPUTS*/
+
+.containerAddTransaction {
+  width: 100%;
+}
+
+.containerAddTransaction h3 {
+  text-align: center;
+}
+
+form {
+  width: 100%;
+}
+
+.text,
+.amount {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 5px;
+  padding: 0px 40px;
+}
+
+.text input,
+.amount input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 7px;
+  border: 2px solid #ced3e8;
+  outline: none;
+}
+
+form button {
+  /* margin-left: 45px; */
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #5e62ac;
+  border-radius: 7px;
+  color: #f0f0f8;
+  font-size: 1.2rem;
+  transition: 0.2s ease-out;
+}
+
+form button:hover {
+  background-color: #152968;
+}
+
+@media (max-width: 993px) {
+  .headerExpenseTracker {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 947px) {
+  .headerExpenseTracker {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 902px) {
+  .headerExpenseTracker {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 781px) {
+  .expenseTracker {
+    width: 70%;
+  }
+}
+
+@media (max-width: 479px) {
+  .expenseTracker {
+    width: 100%;
+  }
+}
+
+@media (max-width: 376px) {
+  .text input,
+  .amount input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 7px;
+    border: 2px solid #ced3e8;
+    outline: none;
+  }
+}
+
+@media (max-width: 359px) {
+  .expenseTracker {
+    width: 100%;
+    height: 100%;
+  }
 }
